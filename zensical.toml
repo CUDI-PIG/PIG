@@ -9,6 +9,7 @@ nav = [
     { "Acceso al cluster de PIG" = [
         "cluster_access/01_linux.md",
         "cluster_access/02_windows.md",
+        "cluster_access/03_macos.md",
         "cluster_access/03_my_fist_pod.md"
     ]},
     {"Agregar nodo a PIG" = [
