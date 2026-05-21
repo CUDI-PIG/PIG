@@ -30,6 +30,9 @@ Para desplejar el pod en el clúster ejecutamos
 kubectl create -f 00-simple-gpu.yaml
 ```
 
+!!! Warning "Advertencia"
+    Si ya hay un pod con el mismo nombre, el comando arrojará un error y no se creará. Tendrá que elegir otro nombre.
+  
 Este comando le dice a *Kubernetes* que cree los recursos definidos en el archivo *YAML*. Podemos monitorear el estado del pod con el siguiente comando
 
 ```bash
@@ -43,7 +46,7 @@ Una vez que el pod está en estado `Running`, podemos interactuar con él de dos
 Por ejemplo
 
 ```bash
-kubectl exec -it demo-cuda -nvidia-smi
+kubectl exec -it demo-cuda -- nvidia-smi
 ```
 
 Usamos el nombre `demo-cuda`, ya que es el que especificamos en el archivo *YAML*. Este comando ejecuta `nvidia-smi` dentro del pod para verificar el estado y la información de la GPU.
@@ -51,7 +54,7 @@ Usamos el nombre `demo-cuda`, ya que es el que especificamos en el archivo *YAML
 - Accediendo al pod de forma interactiva
 
 ```bash
-kubectl exec -it -bash
+kubectl exec -it -- bash
 ```
 
 Este comando nos da acceso a una *shell* interactiva dentro del contenedor, permitiéndonos ejecutar comandos directamente. Para salir del *shell*, use `exit` o presione ++ctrl+d++.
