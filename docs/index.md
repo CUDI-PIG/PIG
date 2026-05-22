@@ -21,4 +21,4 @@ Su principal objetivo es agrupar infraestructura de GPUs distribuida en diferent
 | UNAM | 1 | atocatl | 550.54.15 | 12.4 | GeForce RTX 4070 Ti |
 | UNAM | 1 | atocatl | 550.54.15 | 12.4 | GeForce RTX 3070 Ti |
 | CIMAT | 1 | n-gpu01 | 470.256.02 | 11 | Tesla K40c |
-| UNISON | 4 | acarus-nvidiav100 | 470.256.02 | 12.4 | Tesla V100-SXM2-32GB |
+| UNISON | 4 | acarus-nvidiav100 | 470.256.02 | 11.4 | Tesla V100-SXM2-32GB |
