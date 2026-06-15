@@ -77,7 +77,9 @@ Al ejecutar el comando se abrirá una página nueva en su navegador predetermina
 
 ![Keycloak connection](../assets/images/pig_access/keycloak.png){ style="display: block; margin: 0 auto; width: 1000px;"}
 
-Donde deberá ingresar las credenciales de su cuenta en PIG proporcionadas por el administrador. Si al momento de correr un comando de kubernetes no abre la página de keycloak, como se ve en la image, entonces puede agregar la bandera `--skip-open-browser` al archivo `k8s-setup.sh` para que le imprima la URI donde se redirecciona la página de keycloak. Quedaría el comando de `kubectl` de la siguiente manera
+
+Donde deberá ingresar las credenciales de su cuenta en PIG proporcionadas por el administrador. Si al momento de correr un comando de kubernetes no abre la página de keycloak, como se ve en la image, entonces puede agregar la bandera `
+--skip-open-browser` al archivo `k8s-setup.sh` para que le imprima la URI en la terminal a donde se redirecciona la página de keycloak. Quedaría el comando de `kubectl` de la siguiente manera
 
 ```bash
 
@@ -94,7 +96,8 @@ kubectl config set-credentials oidc --exec-command=kubectl \
 
 Debe correr el archivo de nuevo para que se apliquen los cambios.
 
-Por predeterminado, se redirrecciona al `localhost:8000` o `localhost:18000`. Si tiene ocupados esos puertos puede , en lugar de agregar la bandera `--skip-open-browser`, agregar la bandera `--listen-address=127.0.0.1:puerto_deseado`.
+!!! warning "Importante"
+    Por predeterminado se redirrecciona a `localhost:8000`, si no está libre entonces a `localhost:18000`. Si tiene ocupados los dos puertos deberá de liberar uno para realizar la autentificación.
 
 Si la conexión fue exitosa, en la terminal obtendrá el resultado del comando de *kubernetes*
 
