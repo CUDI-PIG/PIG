@@ -4,10 +4,9 @@ sudo apt-get update
 sudo apt-get install -y curl
 sudo apt-get install -y git
 
-# ddavila 2026-03-18:
-# Max supported kubectl version is 1.31.1
 ARCH="$(uname -m | sed -e 's/x86_64/amd64/' -e 's/\(arm\)\(64\)\?.*/\1\2/' -e 's/aarch64$/arm64/')"
-curl -LO "https://dl.k8s.io/release/v1.31.1/bin/linux/$ARCH/kubectl"
+curl -LO "https://dl.k8s.io/release/v1.36.2/bin/linux/$ARCH/kubectl"
+#ddavila: use the following line to get the latest stable kubelet version.
 #curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl

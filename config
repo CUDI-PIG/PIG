@@ -1,7 +1,7 @@
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority: certs/pmiia/k8s-ca.crt
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJkekNDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUzT0RNM01EUXdPVE13SGhjTk1qWXdOekV3TVRZeU1UTXpXaGNOTXpZd056QTNNVFl5TVRNegpXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUzT0RNM01EUXdPVE13V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFSTUtrKzB2TE9MbG0zSUgwaHBWUHl3cEx1WTVCNG1QQWJ6ekpGNGI4enUKaUNFRXJ1Snd2ZHA1eDBOMXNQTlR3cndJK2Rkd3piVlhwL2VWNkF3a3ByTUJvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVUUzZDFZODJBVll2aUxBMThrREJ6CjZyK0ZWN013Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQVAxYThkSmltV3hUTUR5L1V2RzduK21QdEwyUURHWWYKam4rcHdXV2R0R0RJQWlCWXRUSHdLcVV0WTdMTXpVSkJjM1hUblZ5c3g1MHozc2FzNndUQ2pHaWJrUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
     server: https://132.247.3.163:6443
   name: kubernetes
 contexts:
@@ -22,7 +22,7 @@ users:
       - get-token
       - --oidc-issuer-url=https://sso.lamod.unam.mx/auth/realms/cudi
       - --oidc-client-id=k8s
-      - --oidc-client-secret=secret
+      - --oidc-client-secret=<REPLACE ME>
       command: kubectl
       env: null
       interactiveMode: IfAvailable
