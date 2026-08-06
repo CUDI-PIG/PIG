@@ -14,7 +14,12 @@ Ahora instalamos lo necesario corriendo el archivo `linux-setup.sh`
 ```bash
 chmod +x linux-setup.sh
 ./linux-setup.sh
+
 ```
+
+!!! warning "Importante"
+    El archivo `linux-setup.sh` utiliza el gestor de paquetes de *Debian*, si su distribución no utiliza `apt-get` sustituyalo por el comando de su gestor de paquetes.
+
 Con el primer comando lo hacemos ejecutable. Después, configuramos *kubernetes* ejecutando el archivo `k8s-setup.sh`
 
 ```bash
