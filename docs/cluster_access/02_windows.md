@@ -27,7 +27,7 @@ Empezamos clonando el repositorio de *github* y entramos al directorio descargad
 
 ```bash
 git clone https://github.com/CUDI-PIG/PIG.git
-cd PIG-Resources
+cd PIG
 ```
 
 Ahora instalamos lo necesario corriendo el archivo `wsl-setup.sh`
